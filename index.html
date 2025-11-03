@@ -1,249 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PulseClass — Class Project Proposal</title>
-  <meta name="description" content="PulseClass product proposal — team, overview, features, tech stack, and hosting instructions." />
-  <style>
-    :root{
-      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7;
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,#061022 0%, #071428 100%);color:#e6eef6;}
-    .container{max-width:1000px;margin:36px auto;padding:28px;}
-    header{display:flex;align-items:center;gap:18px;margin-bottom:22px}
-    .logo{
-      width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#073b2a,#046d53);display:flex;align-items:center;justify-content:center;
-      box-shadow:0 6px 30px rgba(2,6,23,0.6);font-weight:700;font-size:20px;color:white;
-    }
-    h1{margin:0;font-size:22px}
-    .meta{color:var(--muted);font-size:13px}
-    nav{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
-    .chip{background:var(--glass);padding:8px 10px;border-radius:10px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
-    main{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:18px}
-    @media (max-width:920px){main{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:18px;box-shadow:0 6px 20px rgba(3,8,20,0.6);border:1px solid rgba(255,255,255,0.03)}
-    section + section{margin-top:14px}
-    h2{margin:0 0 8px 0;font-size:16px}
-    p{color:var(--muted);line-height:1.45;margin:0 0 10px 0}
-    ul{margin:8px 0 12px 18px;color:var(--muted)}
-    .priority{display:flex;gap:8px;flex-direction:column}
-    .priority li{margin:6px 0;padding:8px;border-radius:8px;background:rgba(255,255,255,0.01);font-size:14px}
-    .small{font-size:13px;color:var(--muted)}
-    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);font-weight:600}
-    .host-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-    button{background:#0b1220;border:1px solid rgba(255,255,255,0.04);color:var(--accent);padding:10px 12px;border-radius:10px;cursor:pointer}
-    .muted-btn{color:var(--muted);border:1px dashed rgba(255,255,255,0.03);background:transparent}
-    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
-    .right-col{position:sticky;top:28px;align-self:start}
-    .tech-list{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
-    code{background:rgba(255,255,255,0.02);padding:4px 6px;border-radius:6px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:13px;color:#bfeadf}
-    .copy-area{width:100%;height:120px;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted);resize:vertical}
-    .tagline{color:var(--accent);font-weight:600}
-    .team-list{display:flex;gap:10px;flex-wrap:wrap}
-    .member{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px;font-size:14px}
-    .download-note{font-size:12px;color:var(--muted);margin-top:6px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tower jumper</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  h1, h2 {
+    color: #1a73e8;
+  }
+  section {
+    margin-bottom: 25px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  ul {
+    margin-left: 25px;
+  }
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+  }
+</style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo" aria-hidden>PC</div>
-      <div>
-        <h1>PulseClass <span class="tagline">— Live classroom engagement, simplified</span></h1>
-        <div class="meta">Class project proposal • Lightweight web app to run interactive polls, quizzes, and attendance for live classes</div>
-        <nav>
-          <div class="chip">Status: Proposal</div>
-          <div class="chip">Phase: MVP</div>
-          <div class="chip">Last updated: <strong id="lastUpdated">October 22, 2025</strong></div>
-        </nav>
-      </div>
-    </header>
 
-    <main>
-      <div>
-        <!-- Application Overview -->
-        <div class="card" id="overview">
-          <h2>Application Overview</h2>
-          <p>From an end-user perspective, <strong>PulseClass</strong> is a lightweight web app instructors open in class to quickly launch polls, short quizzes, and attendance checks that students answer from any device — no install required. Instructors see real-time results and simple analytics. Students get immediate feedback and can review their responses later.</p>
+<h1>Tower jumper</h1>
+<p><strong>2D Browser-Based Jumping Game</strong></p>
 
-          <section>
-            <h2>Feature List (Prioritized)</h2>
-            <ol class="priority">
-              <li><strong>MVP Polls & Live Results</strong> — Instructor creates a poll, students respond, live results chart updates.</li>
-              <li><strong>Short Quizzes (Multi-choice)</strong> — 1–5 question quizzes with instant scoring and answer reveal.</li>
-              <li><strong>Student Join via Code/Link</strong> — Short session code or link; no account required for students.</li>
-              <li><strong>Attendance Tally</strong> — Quick attendance check with automatic tally per session.</li>
-              <li><strong>Instructor Dashboard</strong> — Start/stop sessions, view aggregate responses, export CSV.</li>
-            </ol>
-            <p class="small">Prioritized by deliverability in a typical semester-length class project.</p>
-          </section>
+<section>
+  <h2>Creator</h2>
+  <p>Kevin Cordova</p>
+</section>
 
-          <section>
-            <h2>Future Feature List (Non-prioritized)</h2>
-            <ul>
-              <li>Live chat for students (moderated)</li>
-              <li>Rich question types: free-response, image-based, code-run snippets</li>
-              <li>Student accounts and progress tracking across sessions</li>
-              <li>Integrations: Canvas/LMS, Google Classroom single-sign-on</li>
-              <li>Mobile PWA with offline caching and push notifications</li>
-            </ul>
-          </section>
+<section>
+  <h2>Application Overview</h2>
+  <p>
+    Tower Jumper is a simple 2D game where the player controls a character that jumps between platforms to reach higher levels.
+    The goal is to achieve the highest possible score without falling off the platforms. This game demonstrates basic game mechanics, 
+    player control, and interactive physics in a browser environment.
+  </p>
+</section>
 
-          <section>
-            <h2>Basic Technical Features (what we learned in class)</h2>
-            <ul>
-              <li>Responsive HTML/CSS layout (semantic elements, accessible headings)</li>
-              <li>Client-side JavaScript for dynamic UI and real-time updates (WebSockets / polling)</li>
-              <li>REST API endpoints for session and result management</li>
-              <li>Relational data modeling for sessions, questions, responses (simple CRUD)</li>
-              <li>Version control (Git) and deployment pipeline (simple host like GitHub Pages or Netlify for front-end)</li>
-            </ul>
-          </section>
+<section>
+  <h2>Technology Overview</h2>
+  <ul>
+    <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
+    <li><strong>Libraries:</strong> Optional - p5.js or Phaser.js for game physics</li>
+    <li><strong>Platforms:</strong> Browser-based (Windows, MacOS, Linux)</li>
+    <li><strong>Hosting:</strong> GitHub Pages</li>
+  </ul>
+</section>
 
-          <section>
-            <h2>Advanced Technical Features (beyond class)</h2>
-            <ul>
-              <li>Real-time updates via WebSocket server (Socket.IO or native WebSockets)</li>
-              <li>Stateless JWT-based auth for instructors + optional role-based access</li>
-              <li>Containerized deployment with Docker + simple CI (GitHub Actions) to build and run tests</li>
-              <li>Horizontal scaling hints: ephemeral WebSocket session store + Redis pub/sub</li>
-              <li>Data privacy: opt-in analytics, anonymized storage for research</li>
-            </ul>
-          </section>
-        </div>
+<section>
+  <h2>Proposal Last Updated</h2>
+  <p>November 2, 2025</p>
+</section>
 
-        <!-- Technology Overview -->
-        <div class="card" id="tech">
-          <h2>Technology Overview</h2>
-          <p>Planned stack that balances simplicity and learnability while enabling real-time functionality.</p>
-          <div class="tech-list">
-            <div><strong>Frontend</strong><br><code>HTML5</code><br><code>CSS3</code><br><code>Vanilla JS</code> or <code>React</code></div>
-            <div><strong>Backend</strong><br><code>Node.js + Express</code><br><code>Socket.IO</code> or <code>Fastify</code></div>
-            <div><strong>Database</strong><br><code>Postgres</code> (primary)</div>
-            <div><strong>Hosting</strong><br>Frontend: <code>Netlify / GitHub Pages / Vercel</code><br>Backend: <code>Heroku / Render / Fly.io</code></div>
-          </div>
+<section>
+  <h2>Feature List (Prioritized)</h2>
+  <ul>
+    <li>Character movement using arrow keys (left and right)</li>
+    <li>Jumping on platforms</li>
+    <li>Score counter based on height achieved</li>
+    <li>Platforms that randomly generate as the player ascends</li>
+    <li>Collision detection to prevent falling through platforms</li>
+  </ul>
+</section>
 
-          <section style="margin-top:10px;">
-            <h2>Hosting & Deployment</h2>
-            <p class="small">Quick hosting options for a class project:</p>
-            <ul>
-              <li><strong>Frontend-only / static:</strong> GitHub Pages or Netlify — push `index.html` or a build output from React.</li>
-              <li><strong>Full stack / backend:</strong> Render, Heroku (free/low-tier dev plan), or Fly.io for containers. Use GitHub Actions for CI to run tests and deploy.</li>
-              <li><strong>Socket / real-time:</strong> Ensure the host supports WebSocket connections or use a dedicated real-time host (e.g., Fly.io, Render, or a small VPS).</li>
-            </ul>
-          </section>
-        </div>
+<section>
+  <h2>Future Feature List</h2>
+  <ul>
+    <li>Power-ups (double jump, speed boost)</li>
+    <li>Moving platforms</li>
+    <li>Background music and sound effects</li>
+    <li>High score leaderboard</li>
+  </ul>
+</section>
 
-        <!-- Proposal notes and repository -->
-        <div class="card" style="margin-top:12px;">
-          <h2>Repository / Docs</h2>
-          <p class="small">Create a GitHub repo named <code>pulseclass</code>. Suggested structure:</p>
-          <pre class="small" style="background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;">
-/pulseclass
-  /frontend
-    index.html
-    styles.css
-    app.js
-  /backend
-    server.js
-    routes/
-  /docs
-    proposal.md
-    api-spec.md
-  README.md
-          </pre>
-          <p class="small">Keep proposal.md updated with version & release notes.</p>
-        </div>
+<section>
+  <h2>Basic Technical Features</h2>
+  <ul>
+    <li>HTML canvas for game display</li>
+    <li>CSS styling for player and platform visuals</li>
+    <li>JavaScript logic for movement, jumping, and platform generation</li>
+    <li>Simple collision detection</li>
+  </ul>
+</section>
 
-      </div>
+<section>
+  <h2>Advanced Technical Features</h2>
+  <ul>
+    <li>Smooth animations and physics calculations for realistic jumping</li>
+    <li>Dynamic difficulty: platforms get smaller or move faster as score increases</li>
+  </ul>
+</section>
 
-      <aside class="right-col">
-        <div class="card">
-          <h2>Proposal Summary (copyable)</h2>
-          <textarea id="summary" class="copy-area" readonly>
-PulseClass — Live classroom engagement, simplified.
-Team: Member 1, Member 2, Member 3, Member 4.
-MVP: Live polls, short quizzes, join via code, attendance, instructor dashboard.
-Tech: Frontend (HTML/CSS/JS or React), Backend (Node/Express), DB (Postgres), real-time (Socket.IO).
-Last updated: October 22, 2025.
-          </textarea>
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <button id="copyBtn">Copy Summary</button>
-            <button id="downloadBtn" class="muted-btn">Download HTML</button>
-          </div>
-          <p class="download-note">Tip: After editing, upload to GitHub and enable Pages for quick hosting.</p>
-        </div>
+<footer>
+  <p>© 2025 Tower Jumper | Created by Kevin Cordova</p>
+</footer>
 
-        <div class="card" style="margin-top:12px;">
-          <h2>Quick Project Metrics</h2>
-          <p class="small"><strong>Estimated sprint plan (8 weeks):</strong></p>
-          <ul>
-            <li>Weeks 1–2: Core data model + session creation + basic UI</li>
-            <li>Weeks 3–4: Polls & quiz flow + student join</li>
-            <li>Weeks 5–6: Real-time results + dashboard</li>
-            <li>Weeks 7–8: Testing, polish, and deployment</li>
-          </ul>
-          <p class="small"><strong>Deliverables:</strong> Running demo, repo with README, test/smoke checks, short demo video (2–3 min).</p>
-        </div>
-
-        <div class="card" style="margin-top:12px;">
-          <h2>Hosting Instructions (short)</h2>
-          <ol>
-            <li>Initialize Git repo, push to GitHub.</li>
-            <li>(Frontend-only) Enable GitHub Pages from repo settings or deploy with Netlify/Vercel.</li>
-            <li>(Backend) Deploy server to Render/Heroku/Fly; set environment variables for DB & secrets.</li>
-            <li>Use GitHub Actions to run tests and auto-deploy on push to main.</li>
-          </ol>
-          <p class="small">If you want, we can produce the GitHub Actions YAML and a minimal Express server file next.</p>
-        </div>
-
-      </aside>
-    </main>
-
-    <footer>
-      <div class="small">Created as a class project proposal template. Edit team, features, and technical notes to match your scope.</div>
-      <div style="margin-top:6px;font-size:12px;color:var(--muted)">Proposal Last Updated: <strong id="lastUpdatedFooter">October 22, 2025</strong></div>
-    </footer>
-  </div>
-
-  <script>
-    // Last-updated fields (set programmatically in case you copy this file later)
-    (function(){
-      const last = "October 22, 2025";
-      document.getElementById('lastUpdated').textContent = last;
-      document.getElementById('lastUpdatedFooter').textContent = last;
-    })();
-
-    // Copy summary to clipboard
-    document.getElementById('copyBtn').addEventListener('click', async () => {
-      const txt = document.getElementById('summary').value;
-      try {
-        await navigator.clipboard.writeText(txt);
-        alert('Summary copied to clipboard.');
-      } catch (e) {
-        alert('Copy failed — select and copy manually.');
-      }
-    });
-
-    // Download the current HTML as a file (self-download)
-    document.getElementById('downloadBtn').addEventListener('click', () => {
-      const doctype = "<!doctype html>\\n";
-      const html = document.documentElement.outerHTML;
-      const blob = new Blob([doctype + html], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'pulseclass-proposal.html';
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
-    });
-  </script>
 </body>
 </html>
+
 
